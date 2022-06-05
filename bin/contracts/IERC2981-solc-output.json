@@ -1,0 +1,959 @@
+{
+    "contracts": {
+        "/Users/scarnes/SimpliX/SimpliNew/contracts/IERC2981.sol": {
+            "IERC2981": {
+                "abi": [
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_tokenId",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "_salePrice",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "royaltyInfo",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "receiver",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "royaltyAmount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    }
+                ],
+                "devdoc": {
+                    "details": "Interface for the NFT Royalty Standard",
+                    "kind": "dev",
+                    "methods": {
+                        "royaltyInfo(uint256,uint256)": {
+                            "params": {
+                                "_salePrice": "- the sale price of the NFT asset specified by _tokenId",
+                                "_tokenId": "- the NFT asset queried for royalty information"
+                            },
+                            "returns": {
+                                "receiver": "- address of who should be sent the royalty payment",
+                                "royaltyAmount": "- the royalty payment amount for _salePrice"
+                            }
+                        }
+                    },
+                    "version": 1
+                },
+                "evm": {
+                    "bytecode": {
+                        "functionDebugData": {},
+                        "generatedSources": [],
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "deployedBytecode": {
+                        "functionDebugData": {},
+                        "generatedSources": [],
+                        "immutableReferences": {},
+                        "linkReferences": {},
+                        "object": "",
+                        "opcodes": "",
+                        "sourceMap": ""
+                    },
+                    "gasEstimates": null,
+                    "methodIdentifiers": {
+                        "royaltyInfo(uint256,uint256)": "2a55205a"
+                    }
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_salePrice\",\"type\":\"uint256\"}],\"name\":\"royaltyInfo\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"royaltyAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the NFT Royalty Standard\",\"kind\":\"dev\",\"methods\":{\"royaltyInfo(uint256,uint256)\":{\"params\":{\"_salePrice\":\"- the sale price of the NFT asset specified by _tokenId\",\"_tokenId\":\"- the NFT asset queried for royalty information\"},\"returns\":{\"receiver\":\"- address of who should be sent the royalty payment\",\"royaltyAmount\":\"- the royalty payment amount for _salePrice\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/IERC2981.sol\":\"IERC2981\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/IERC2981.sol\":{\"keccak256\":\"0x7e88378b95c46028779a100eb1f382feef6d334d0473317ab1f0c131372a8271\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ed533058e02d87ccce266e43d65e7836644d5826fb1656a1205373af8539f4f\",\"dweb:/ipfs/QmNkrbpafPhC2ty2S2DsmGvPeHQosGJvKJZbYxHmTi22HR\"]},\"/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol\":{\"keccak256\":\"0x09c2a9ae3bb2155d56b2eba99541de5d1b0b0f4034ba5fe6996acb66f9e7d1b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a4eddcc8af3695935e868b2260de35f76a4c2286777042b870332eb21ce2d49c\",\"dweb:/ipfs/Qmd27bqxvbmjptwz6oskjejKEcGm2KdwSxYx7Atj8cV8Sg\"]}},\"version\":1}",
+                "storageLayout": {
+                    "storage": [],
+                    "types": null
+                },
+                "userdoc": {
+                    "kind": "user",
+                    "methods": {},
+                    "version": 1
+                }
+            }
+        },
+        "/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol": {
+            "LibPart": {
+                "abi": [
+                    {
+                        "inputs": [],
+                        "name": "TYPE_HASH",
+                        "outputs": [
+                            {
+                                "internalType": "bytes32",
+                                "name": "",
+                                "type": "bytes32"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    }
+                ],
+                "devdoc": {
+                    "kind": "dev",
+                    "methods": {},
+                    "version": 1
+                },
+                "evm": {
+                    "bytecode": {
+                        "functionDebugData": {},
+                        "generatedSources": [],
+                        "linkReferences": {},
+                        "object": "60a6610038600b82828239805160001a607314602b57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806364d4c819146038575b600080fd5b605e7f397e04204c1e1a60ee8724b71f8244e10ab5f2e9009854d80f602bda21b59ebb81565b60405190815260200160405180910390f3fea2646970667358221220b8ba416bea8e2b18e56583c2e59805cfe1ff4ad289781e4dc0fa7e1326eda8e364736f6c634300080a0033",
+                        "opcodes": "PUSH1 0xA6 PUSH2 0x38 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x2B JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x33 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x64D4C819 EQ PUSH1 0x38 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5E PUSH32 0x397E04204C1E1A60EE8724B71F8244E10AB5F2E9009854D80F602BDA21B59EBB DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB8 0xBA COINBASE PUSH12 0xEA8E2B18E56583C2E59805CF 0xE1 SELFDESTRUCT 0x4A 0xD2 DUP10 PUSH25 0x1E4DC0FA7E1326EDA8E364736F6C634300080A003300000000 ",
+                        "sourceMap": "66:340:1:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;66:340:1;;;;;;;;;;;;;;;;;"
+                    },
+                    "deployedBytecode": {
+                        "functionDebugData": {
+                            "@TYPE_HASH_23": {
+                                "entryPoint": null,
+                                "id": 23,
+                                "parameterSlots": 0,
+                                "returnSlots": 0
+                            },
+                            "abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_library_reversed": {
+                                "entryPoint": null,
+                                "id": null,
+                                "parameterSlots": 2,
+                                "returnSlots": 1
+                            }
+                        },
+                        "generatedSources": [
+                            {
+                                "ast": {
+                                    "nodeType": "YulBlock",
+                                    "src": "0:201:2",
+                                    "statements": [
+                                        {
+                                            "nodeType": "YulBlock",
+                                            "src": "6:3:2",
+                                            "statements": []
+                                        },
+                                        {
+                                            "body": {
+                                                "nodeType": "YulBlock",
+                                                "src": "123:76:2",
+                                                "statements": [
+                                                    {
+                                                        "nodeType": "YulAssignment",
+                                                        "src": "133:26:2",
+                                                        "value": {
+                                                            "arguments": [
+                                                                {
+                                                                    "name": "headStart",
+                                                                    "nodeType": "YulIdentifier",
+                                                                    "src": "145:9:2"
+                                                                },
+                                                                {
+                                                                    "kind": "number",
+                                                                    "nodeType": "YulLiteral",
+                                                                    "src": "156:2:2",
+                                                                    "type": "",
+                                                                    "value": "32"
+                                                                }
+                                                            ],
+                                                            "functionName": {
+                                                                "name": "add",
+                                                                "nodeType": "YulIdentifier",
+                                                                "src": "141:3:2"
+                                                            },
+                                                            "nodeType": "YulFunctionCall",
+                                                            "src": "141:18:2"
+                                                        },
+                                                        "variableNames": [
+                                                            {
+                                                                "name": "tail",
+                                                                "nodeType": "YulIdentifier",
+                                                                "src": "133:4:2"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "expression": {
+                                                            "arguments": [
+                                                                {
+                                                                    "name": "headStart",
+                                                                    "nodeType": "YulIdentifier",
+                                                                    "src": "175:9:2"
+                                                                },
+                                                                {
+                                                                    "name": "value0",
+                                                                    "nodeType": "YulIdentifier",
+                                                                    "src": "186:6:2"
+                                                                }
+                                                            ],
+                                                            "functionName": {
+                                                                "name": "mstore",
+                                                                "nodeType": "YulIdentifier",
+                                                                "src": "168:6:2"
+                                                            },
+                                                            "nodeType": "YulFunctionCall",
+                                                            "src": "168:25:2"
+                                                        },
+                                                        "nodeType": "YulExpressionStatement",
+                                                        "src": "168:25:2"
+                                                    }
+                                                ]
+                                            },
+                                            "name": "abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_library_reversed",
+                                            "nodeType": "YulFunctionDefinition",
+                                            "parameters": [
+                                                {
+                                                    "name": "headStart",
+                                                    "nodeType": "YulTypedName",
+                                                    "src": "92:9:2",
+                                                    "type": ""
+                                                },
+                                                {
+                                                    "name": "value0",
+                                                    "nodeType": "YulTypedName",
+                                                    "src": "103:6:2",
+                                                    "type": ""
+                                                }
+                                            ],
+                                            "returnVariables": [
+                                                {
+                                                    "name": "tail",
+                                                    "nodeType": "YulTypedName",
+                                                    "src": "114:4:2",
+                                                    "type": ""
+                                                }
+                                            ],
+                                            "src": "14:185:2"
+                                        }
+                                    ]
+                                },
+                                "contents": "{\n    { }\n    function abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_library_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n}",
+                                "id": 2,
+                                "language": "Yul",
+                                "name": "#utility.yul"
+                            }
+                        ],
+                        "immutableReferences": {},
+                        "linkReferences": {},
+                        "object": "730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806364d4c819146038575b600080fd5b605e7f397e04204c1e1a60ee8724b71f8244e10ab5f2e9009854d80f602bda21b59ebb81565b60405190815260200160405180910390f3fea2646970667358221220b8ba416bea8e2b18e56583c2e59805cfe1ff4ad289781e4dc0fa7e1326eda8e364736f6c634300080a0033",
+                        "opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x33 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x64D4C819 EQ PUSH1 0x38 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x5E PUSH32 0x397E04204C1E1A60EE8724B71F8244E10AB5F2E9009854D80F602BDA21B59EBB DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB8 0xBA COINBASE PUSH12 0xEA8E2B18E56583C2E59805CF 0xE1 SELFDESTRUCT 0x4A 0xD2 DUP10 PUSH25 0x1E4DC0FA7E1326EDA8E364736F6C634300080A003300000000 ",
+                        "sourceMap": "66:340:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;88:83;;124:47;88:83;;;;;168:25:2;;;156:2;141:18;88:83:1;;;;;;"
+                    },
+                    "gasEstimates": {
+                        "creation": {
+                            "codeDepositCost": "33200",
+                            "executionCost": "118",
+                            "totalCost": "33318"
+                        },
+                        "external": {
+                            "TYPE_HASH()": "145"
+                        },
+                        "internal": {
+                            "hash(struct LibPart.Part memory)": "infinite"
+                        }
+                    },
+                    "methodIdentifiers": {
+                        "TYPE_HASH()": "64d4c819"
+                    }
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"TYPE_HASH\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol\":\"LibPart\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol\":{\"keccak256\":\"0x09c2a9ae3bb2155d56b2eba99541de5d1b0b0f4034ba5fe6996acb66f9e7d1b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a4eddcc8af3695935e868b2260de35f76a4c2286777042b870332eb21ce2d49c\",\"dweb:/ipfs/Qmd27bqxvbmjptwz6oskjejKEcGm2KdwSxYx7Atj8cV8Sg\"]}},\"version\":1}",
+                "storageLayout": {
+                    "storage": [],
+                    "types": null
+                },
+                "userdoc": {
+                    "kind": "user",
+                    "methods": {},
+                    "version": 1
+                }
+            }
+        }
+    },
+    "sources": {
+        "/Users/scarnes/SimpliX/SimpliNew/contracts/IERC2981.sol": {
+            "ast": {
+                "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/IERC2981.sol",
+                "exportedSymbols": {
+                    "IERC2981": [
+                        16
+                    ],
+                    "LibPart": [
+                        49
+                    ]
+                },
+                "id": 17,
+                "license": "MIT",
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 1,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.6",
+                            ".2",
+                            "^",
+                            "0.8",
+                            ".0"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "33:31:0"
+                    },
+                    {
+                        "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol",
+                        "file": "./LibPart.sol",
+                        "id": 2,
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "ImportDirective",
+                        "scope": 17,
+                        "sourceUnit": 50,
+                        "src": "65:23:0",
+                        "symbolAliases": [],
+                        "unitAlias": ""
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [],
+                        "canonicalName": "IERC2981",
+                        "contractDependencies": [],
+                        "contractKind": "interface",
+                        "documentation": {
+                            "id": 3,
+                            "nodeType": "StructuredDocumentation",
+                            "src": "89:56:0",
+                            "text": "\n @dev Interface for the NFT Royalty Standard"
+                        },
+                        "fullyImplemented": false,
+                        "id": 16,
+                        "linearizedBaseContracts": [
+                            16
+                        ],
+                        "name": "IERC2981",
+                        "nameLocation": "189:8:0",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "documentation": {
+                                    "id": 4,
+                                    "nodeType": "StructuredDocumentation",
+                                    "src": "621:300:0",
+                                    "text": "@param _tokenId - the NFT asset queried for royalty information\n @param _salePrice - the sale price of the NFT asset specified by _tokenId\n @return receiver - address of who should be sent the royalty payment\n @return royaltyAmount - the royalty payment amount for _salePrice"
+                                },
+                                "functionSelector": "2a55205a",
+                                "id": 15,
+                                "implemented": false,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "royaltyInfo",
+                                "nameLocation": "935:11:0",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 9,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 6,
+                                            "mutability": "mutable",
+                                            "name": "_tokenId",
+                                            "nameLocation": "964:8:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 15,
+                                            "src": "956:16:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 5,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "956:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 8,
+                                            "mutability": "mutable",
+                                            "name": "_salePrice",
+                                            "nameLocation": "990:10:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 15,
+                                            "src": "982:18:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 7,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "982:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "946:60:0"
+                                },
+                                "returnParameters": {
+                                    "id": 14,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 11,
+                                            "mutability": "mutable",
+                                            "name": "receiver",
+                                            "nameLocation": "1047:8:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 15,
+                                            "src": "1039:16:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 10,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1039:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        },
+                                        {
+                                            "constant": false,
+                                            "id": 13,
+                                            "mutability": "mutable",
+                                            "name": "royaltyAmount",
+                                            "nameLocation": "1073:13:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 15,
+                                            "src": "1065:21:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 12,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1065:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "1029:63:0"
+                                },
+                                "scope": 16,
+                                "src": "926:167:0",
+                                "stateMutability": "view",
+                                "virtual": false,
+                                "visibility": "external"
+                            }
+                        ],
+                        "scope": 17,
+                        "src": "179:916:0",
+                        "usedErrors": []
+                    }
+                ],
+                "src": "33:1062:0"
+            },
+            "id": 0
+        },
+        "/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol": {
+            "ast": {
+                "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol",
+                "exportedSymbols": {
+                    "LibPart": [
+                        49
+                    ]
+                },
+                "id": 50,
+                "license": "MIT",
+                "nodeType": "SourceUnit",
+                "nodes": [
+                    {
+                        "id": 18,
+                        "literals": [
+                            "solidity",
+                            ">=",
+                            "0.6",
+                            ".2",
+                            "^",
+                            "0.8",
+                            ".0"
+                        ],
+                        "nodeType": "PragmaDirective",
+                        "src": "33:31:1"
+                    },
+                    {
+                        "abstract": false,
+                        "baseContracts": [],
+                        "canonicalName": "LibPart",
+                        "contractDependencies": [],
+                        "contractKind": "library",
+                        "fullyImplemented": true,
+                        "id": 49,
+                        "linearizedBaseContracts": [
+                            49
+                        ],
+                        "name": "LibPart",
+                        "nameLocation": "74:7:1",
+                        "nodeType": "ContractDefinition",
+                        "nodes": [
+                            {
+                                "constant": true,
+                                "functionSelector": "64d4c819",
+                                "id": 23,
+                                "mutability": "constant",
+                                "name": "TYPE_HASH",
+                                "nameLocation": "112:9:1",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 49,
+                                "src": "88:83:1",
+                                "stateVariable": true,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_bytes32",
+                                    "typeString": "bytes32"
+                                },
+                                "typeName": {
+                                    "id": 19,
+                                    "name": "bytes32",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "88:7:1",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    }
+                                },
+                                "value": {
+                                    "arguments": [
+                                        {
+                                            "hexValue": "506172742861646472657373206163636f756e742c75696e7439362076616c756529",
+                                            "id": 21,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "string",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "134:36:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_stringliteral_397e04204c1e1a60ee8724b71f8244e10ab5f2e9009854d80f602bda21b59ebb",
+                                                "typeString": "literal_string \"Part(address account,uint96 value)\""
+                                            },
+                                            "value": "Part(address account,uint96 value)"
+                                        }
+                                    ],
+                                    "expression": {
+                                        "argumentTypes": [
+                                            {
+                                                "typeIdentifier": "t_stringliteral_397e04204c1e1a60ee8724b71f8244e10ab5f2e9009854d80f602bda21b59ebb",
+                                                "typeString": "literal_string \"Part(address account,uint96 value)\""
+                                            }
+                                        ],
+                                        "id": 20,
+                                        "name": "keccak256",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 4294967288,
+                                        "src": "124:9:1",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                                        }
+                                    },
+                                    "id": 22,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "124:47:1",
+                                    "tryCall": false,
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bytes32",
+                                        "typeString": "bytes32"
+                                    }
+                                },
+                                "visibility": "public"
+                            },
+                            {
+                                "canonicalName": "LibPart.Part",
+                                "id": 28,
+                                "members": [
+                                    {
+                                        "constant": false,
+                                        "id": 25,
+                                        "mutability": "mutable",
+                                        "name": "account",
+                                        "nameLocation": "216:7:1",
+                                        "nodeType": "VariableDeclaration",
+                                        "scope": 28,
+                                        "src": "200:23:1",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address_payable",
+                                            "typeString": "address payable"
+                                        },
+                                        "typeName": {
+                                            "id": 24,
+                                            "name": "address",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "200:15:1",
+                                            "stateMutability": "payable",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address_payable",
+                                                "typeString": "address payable"
+                                            }
+                                        },
+                                        "visibility": "internal"
+                                    },
+                                    {
+                                        "constant": false,
+                                        "id": 27,
+                                        "mutability": "mutable",
+                                        "name": "value",
+                                        "nameLocation": "240:5:1",
+                                        "nodeType": "VariableDeclaration",
+                                        "scope": 28,
+                                        "src": "233:12:1",
+                                        "stateVariable": false,
+                                        "storageLocation": "default",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint96",
+                                            "typeString": "uint96"
+                                        },
+                                        "typeName": {
+                                            "id": 26,
+                                            "name": "uint96",
+                                            "nodeType": "ElementaryTypeName",
+                                            "src": "233:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint96",
+                                                "typeString": "uint96"
+                                            }
+                                        },
+                                        "visibility": "internal"
+                                    }
+                                ],
+                                "name": "Part",
+                                "nameLocation": "185:4:1",
+                                "nodeType": "StructDefinition",
+                                "scope": 49,
+                                "src": "178:74:1",
+                                "visibility": "public"
+                            },
+                            {
+                                "body": {
+                                    "id": 47,
+                                    "nodeType": "Block",
+                                    "src": "322:82:1",
+                                    "statements": [
+                                        {
+                                            "expression": {
+                                                "arguments": [
+                                                    {
+                                                        "arguments": [
+                                                            {
+                                                                "id": 39,
+                                                                "name": "TYPE_HASH",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 23,
+                                                                "src": "360:9:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_bytes32",
+                                                                    "typeString": "bytes32"
+                                                                }
+                                                            },
+                                                            {
+                                                                "expression": {
+                                                                    "id": 40,
+                                                                    "name": "part",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 31,
+                                                                    "src": "371:4:1",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Part_$28_memory_ptr",
+                                                                        "typeString": "struct LibPart.Part memory"
+                                                                    }
+                                                                },
+                                                                "id": 41,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "account",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 25,
+                                                                "src": "371:12:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_address_payable",
+                                                                    "typeString": "address payable"
+                                                                }
+                                                            },
+                                                            {
+                                                                "expression": {
+                                                                    "id": 42,
+                                                                    "name": "part",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 31,
+                                                                    "src": "385:4:1",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_struct$_Part_$28_memory_ptr",
+                                                                        "typeString": "struct LibPart.Part memory"
+                                                                    }
+                                                                },
+                                                                "id": 43,
+                                                                "isConstant": false,
+                                                                "isLValue": true,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "memberName": "value",
+                                                                "nodeType": "MemberAccess",
+                                                                "referencedDeclaration": 27,
+                                                                "src": "385:10:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_uint96",
+                                                                    "typeString": "uint96"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "expression": {
+                                                            "argumentTypes": [
+                                                                {
+                                                                    "typeIdentifier": "t_bytes32",
+                                                                    "typeString": "bytes32"
+                                                                },
+                                                                {
+                                                                    "typeIdentifier": "t_address_payable",
+                                                                    "typeString": "address payable"
+                                                                },
+                                                                {
+                                                                    "typeIdentifier": "t_uint96",
+                                                                    "typeString": "uint96"
+                                                                }
+                                                            ],
+                                                            "expression": {
+                                                                "id": 37,
+                                                                "name": "abi",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 4294967295,
+                                                                "src": "349:3:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_magic_abi",
+                                                                    "typeString": "abi"
+                                                                }
+                                                            },
+                                                            "id": 38,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": true,
+                                                            "lValueRequested": false,
+                                                            "memberName": "encode",
+                                                            "nodeType": "MemberAccess",
+                                                            "src": "349:10:1",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                                                                "typeString": "function () pure returns (bytes memory)"
+                                                            }
+                                                        },
+                                                        "id": 44,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "kind": "functionCall",
+                                                        "lValueRequested": false,
+                                                        "names": [],
+                                                        "nodeType": "FunctionCall",
+                                                        "src": "349:47:1",
+                                                        "tryCall": false,
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_bytes_memory_ptr",
+                                                            "typeString": "bytes memory"
+                                                        }
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_bytes_memory_ptr",
+                                                            "typeString": "bytes memory"
+                                                        }
+                                                    ],
+                                                    "id": 36,
+                                                    "name": "keccak256",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967288,
+                                                    "src": "339:9:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                                        "typeString": "function (bytes memory) pure returns (bytes32)"
+                                                    }
+                                                },
+                                                "id": 45,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "kind": "functionCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "339:58:1",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes32",
+                                                    "typeString": "bytes32"
+                                                }
+                                            },
+                                            "functionReturnParameters": 35,
+                                            "id": 46,
+                                            "nodeType": "Return",
+                                            "src": "332:65:1"
+                                        }
+                                    ]
+                                },
+                                "id": 48,
+                                "implemented": true,
+                                "kind": "function",
+                                "modifiers": [],
+                                "name": "hash",
+                                "nameLocation": "267:4:1",
+                                "nodeType": "FunctionDefinition",
+                                "parameters": {
+                                    "id": 32,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 31,
+                                            "mutability": "mutable",
+                                            "name": "part",
+                                            "nameLocation": "284:4:1",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 48,
+                                            "src": "272:16:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Part_$28_memory_ptr",
+                                                "typeString": "struct LibPart.Part"
+                                            },
+                                            "typeName": {
+                                                "id": 30,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 29,
+                                                    "name": "Part",
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 28,
+                                                    "src": "272:4:1"
+                                                },
+                                                "referencedDeclaration": 28,
+                                                "src": "272:4:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Part_$28_storage_ptr",
+                                                    "typeString": "struct LibPart.Part"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "271:18:1"
+                                },
+                                "returnParameters": {
+                                    "id": 35,
+                                    "nodeType": "ParameterList",
+                                    "parameters": [
+                                        {
+                                            "constant": false,
+                                            "id": 34,
+                                            "mutability": "mutable",
+                                            "name": "",
+                                            "nameLocation": "-1:-1:-1",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 48,
+                                            "src": "313:7:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bytes32",
+                                                "typeString": "bytes32"
+                                            },
+                                            "typeName": {
+                                                "id": 33,
+                                                "name": "bytes32",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "313:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bytes32",
+                                                    "typeString": "bytes32"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "src": "312:9:1"
+                                },
+                                "scope": 49,
+                                "src": "258:146:1",
+                                "stateMutability": "pure",
+                                "virtual": false,
+                                "visibility": "internal"
+                            }
+                        ],
+                        "scope": 50,
+                        "src": "66:340:1",
+                        "usedErrors": []
+                    }
+                ],
+                "src": "33:374:1"
+            },
+            "id": 1
+        }
+    }
+}

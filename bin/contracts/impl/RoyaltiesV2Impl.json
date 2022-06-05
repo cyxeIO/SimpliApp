@@ -1,0 +1,569 @@
+{
+    "contractName": "RoyaltiesV2Impl",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "tokenId",
+                    "type": "uint256"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "address payable",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint96",
+                            "name": "value",
+                            "type": "uint96"
+                        }
+                    ],
+                    "indexed": false,
+                    "internalType": "struct LibPart.Part[]",
+                    "name": "royalties",
+                    "type": "tuple[]"
+                }
+            ],
+            "name": "RoyaltiesSet",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "id",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getRaribleV2Royalties",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "address payable",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint96",
+                            "name": "value",
+                            "type": "uint96"
+                        }
+                    ],
+                    "internalType": "struct LibPart.Part[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "royalties",
+            "outputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "account",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint96",
+                    "name": "value",
+                    "type": "uint96"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint96\",\"name\":\"value\",\"type\":\"uint96\"}],\"indexed\":false,\"internalType\":\"struct LibPart.Part[]\",\"name\":\"royalties\",\"type\":\"tuple[]\"}],\"name\":\"RoyaltiesSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getRaribleV2Royalties\",\"outputs\":[{\"components\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint96\",\"name\":\"value\",\"type\":\"uint96\"}],\"internalType\":\"struct LibPart.Part[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"royalties\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint96\",\"name\":\"value\",\"type\":\"uint96\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/impl/RoyaltiesV2Impl.sol\":\"RoyaltiesV2Impl\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/scarnes/SimpliX/SimpliNew/contracts/LibPart.sol\":{\"keccak256\":\"0x09c2a9ae3bb2155d56b2eba99541de5d1b0b0f4034ba5fe6996acb66f9e7d1b6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a4eddcc8af3695935e868b2260de35f76a4c2286777042b870332eb21ce2d49c\",\"dweb:/ipfs/Qmd27bqxvbmjptwz6oskjejKEcGm2KdwSxYx7Atj8cV8Sg\"]},\"/Users/scarnes/SimpliX/SimpliNew/contracts/RoyaltiesV2.sol\":{\"keccak256\":\"0xf0769d1367cfeff4c38a59d336dcda5f2537bd5ff5cabe2f28f09d98a77a8ae9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://eac287c1c09821af6d89cdc54303a48ab3d7a05ba4e92475de089204c733dbcd\",\"dweb:/ipfs/QmTjQdfvdjD1wV4qmcNgPWCXbtdTUTYdghvLeo6PrUTmqP\"]},\"/Users/scarnes/SimpliX/SimpliNew/contracts/impl/AbstractRoyalties.sol\":{\"keccak256\":\"0xb61340d2e1d3dd31e40b68ec70170edb23616bf6d1e90d3280198e95508cca50\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://71a78269aecfbd4fd60d63bed409735d91a2c1969dcb4a5415e1c2002d4d431a\",\"dweb:/ipfs/QmScEeLNp5jVMFGLzTEzrHL5nYmNDA85w4tbNn6NWAw6wE\"]},\"/Users/scarnes/SimpliX/SimpliNew/contracts/impl/RoyaltiesV2Impl.sol\":{\"keccak256\":\"0xf9b309fe50172fcc6f9d89054397b3992caa9261f6f7d5188fa80ff29258dbcb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dad327be78936fae4bb160f49602d40b9cbc2a6ab07c24b27e5cb7b4c2272a9b\",\"dweb:/ipfs/QmSAjgekxBXYJgJfJb4GcNfXpAaX4mky8hfGLuxp5ogu1e\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b5061023b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638924af741461003b578063cad96cca1461007a575b600080fd5b61004e610049366004610169565b61009a565b604080516001600160a01b0390931683526001600160601b039091166020830152015b60405180910390f35b61008d61008836600461018b565b6100e3565b60405161007191906101a4565b600060205281600052604060002081815481106100b657600080fd5b6000918252602090912001546001600160a01b0381169250600160a01b90046001600160601b0316905082565b600081815260208181526040808320805482518185028101850190935280835260609492939192909184015b8282101561015e57600084815260209081902060408051808201909152908401546001600160a01b0381168252600160a01b90046001600160601b03168183015282526001909201910161010f565b505050509050919050565b6000806040838503121561017c57600080fd5b50508035926020909101359150565b60006020828403121561019d57600080fd5b5035919050565b602080825282518282018190526000919060409081850190868401855b828110156101f857815180516001600160a01b031685528601516001600160601b03168685015292840192908501906001016101c1565b509197965050505050505056fea26469706673582212201aaf4f7e4c7350264960fce68283b85f1266a293126dd1f39441167a00649ad264736f6c634300080a0033",
+    "deployedBytecode": "608060405234801561001057600080fd5b50600436106100365760003560e01c80638924af741461003b578063cad96cca1461007a575b600080fd5b61004e610049366004610169565b61009a565b604080516001600160a01b0390931683526001600160601b039091166020830152015b60405180910390f35b61008d61008836600461018b565b6100e3565b60405161007191906101a4565b600060205281600052604060002081815481106100b657600080fd5b6000918252602090912001546001600160a01b0381169250600160a01b90046001600160601b0316905082565b600081815260208181526040808320805482518185028101850190935280835260609492939192909184015b8282101561015e57600084815260209081902060408051808201909152908401546001600160a01b0381168252600160a01b90046001600160601b03168183015282526001909201910161010f565b505050509050919050565b6000806040838503121561017c57600080fd5b50508035926020909101359150565b60006020828403121561019d57600080fd5b5035919050565b602080825282518282018190526000919060409081850190868401855b828110156101f857815180516001600160a01b031685528601516001600160601b03168685015292840192908501906001016101c1565b509197965050505050505056fea26469706673582212201aaf4f7e4c7350264960fce68283b85f1266a293126dd1f39441167a00649ad264736f6c634300080a0033",
+    "sourceMap": "122:349:3:-:0;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "122:349:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;126:52:2;;;;;;:::i;:::-;;:::i;:::-;;;;-1:-1:-1;;;;;473:32:4;;;455:51;;-1:-1:-1;;;;;542:39:4;;;537:2;522:18;;515:67;428:18;126:52:2;;;;;;;;187:135:3;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;126:52:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;126:52:2;;;-1:-1:-1;;;;126:52:2;;-1:-1:-1;;;;;126:52:2;;-1:-1:-1;126:52:2;:::o;187:135:3:-;302:9;:13;;;;;;;;;;;295:20;;;;;;;;;;;;;;;;;262:21;;295:20;;302:13;;295:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;295:20:3;;;;-1:-1:-1;;;295:20:3;;-1:-1:-1;;;;;295:20:3;;;;;;;;;;;;;;;;;;;;;;187:135;;;:::o;14:248:4:-;82:6;90;143:2;131:9;122:7;118:23;114:32;111:52;;;159:1;156;149:12;111:52;-1:-1:-1;;182:23:4;;;252:2;237:18;;;224:32;;-1:-1:-1;14:248:4:o;593:180::-;652:6;705:2;693:9;684:7;680:23;676:32;673:52;;;721:1;718;711:12;673:52;-1:-1:-1;744:23:4;;593:180;-1:-1:-1;593:180:4:o;778:837::-;989:2;1041:21;;;1111:13;;1014:18;;;1133:22;;;960:4;;989:2;1174;;1192:18;;;;1233:15;;;960:4;1276:313;1290:6;1287:1;1284:13;1276:313;;;1349:13;;1391:9;;-1:-1:-1;;;;;1387:35:4;1375:48;;1467:11;;1461:18;-1:-1:-1;;;;;1457:51:4;1443:12;;;1436:73;1529:12;;;;1564:15;;;;1419:1;1305:9;1276:313;;;-1:-1:-1;1606:3:4;;778:837;-1:-1:-1;;;;;;;778:837:4:o",
+    "sourcePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/impl/RoyaltiesV2Impl.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.10+commit.fc410830"
+    },
+    "ast": {
+        "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/impl/RoyaltiesV2Impl.sol",
+        "exportedSymbols": {
+            "AbstractRoyalties": [
+                190
+            ],
+            "LibPart": [
+                32
+            ],
+            "RoyaltiesV2": [
+                54
+            ],
+            "RoyaltiesV2Impl": [
+                230
+            ]
+        },
+        "id": 231,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 192,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "33:23:3"
+            },
+            {
+                "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/impl/AbstractRoyalties.sol",
+                "file": "./AbstractRoyalties.sol",
+                "id": 193,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 231,
+                "sourceUnit": 191,
+                "src": "58:33:3",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "absolutePath": "/Users/scarnes/SimpliX/SimpliNew/contracts/RoyaltiesV2.sol",
+                "file": "../RoyaltiesV2.sol",
+                "id": 194,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 231,
+                "sourceUnit": 55,
+                "src": "92:28:3",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [
+                    {
+                        "baseName": {
+                            "id": 195,
+                            "name": "AbstractRoyalties",
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 190,
+                            "src": "150:17:3"
+                        },
+                        "id": 196,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "150:17:3"
+                    },
+                    {
+                        "baseName": {
+                            "id": 197,
+                            "name": "RoyaltiesV2",
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 54,
+                            "src": "169:11:3"
+                        },
+                        "id": 198,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "169:11:3"
+                    }
+                ],
+                "canonicalName": "RoyaltiesV2Impl",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 230,
+                "linearizedBaseContracts": [
+                    230,
+                    54,
+                    190
+                ],
+                "name": "RoyaltiesV2Impl",
+                "nameLocation": "131:15:3",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "baseFunctions": [
+                            53
+                        ],
+                        "body": {
+                            "id": 212,
+                            "nodeType": "Block",
+                            "src": "285:37:3",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "baseExpression": {
+                                            "id": 208,
+                                            "name": "royalties",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 63,
+                                            "src": "302:9:3",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_Part_$11_storage_$dyn_storage_$",
+                                                "typeString": "mapping(uint256 => struct LibPart.Part storage ref[] storage ref)"
+                                            }
+                                        },
+                                        "id": 210,
+                                        "indexExpression": {
+                                            "id": 209,
+                                            "name": "id",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 200,
+                                            "src": "312:2:3",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "302:13:3",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Part_$11_storage_$dyn_storage",
+                                            "typeString": "struct LibPart.Part storage ref[] storage ref"
+                                        }
+                                    },
+                                    "functionReturnParameters": 207,
+                                    "id": 211,
+                                    "nodeType": "Return",
+                                    "src": "295:20:3"
+                                }
+                            ]
+                        },
+                        "functionSelector": "cad96cca",
+                        "id": 213,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getRaribleV2Royalties",
+                        "nameLocation": "196:21:3",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": {
+                            "id": 202,
+                            "nodeType": "OverrideSpecifier",
+                            "overrides": [],
+                            "src": "230:8:3"
+                        },
+                        "parameters": {
+                            "id": 201,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 200,
+                                    "mutability": "mutable",
+                                    "name": "id",
+                                    "nameLocation": "226:2:3",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 213,
+                                    "src": "218:10:3",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 199,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "218:7:3",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "217:12:3"
+                        },
+                        "returnParameters": {
+                            "id": 207,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 206,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 213,
+                                    "src": "262:21:3",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Part_$11_memory_ptr_$dyn_memory_ptr",
+                                        "typeString": "struct LibPart.Part[]"
+                                    },
+                                    "typeName": {
+                                        "baseType": {
+                                            "id": 204,
+                                            "nodeType": "UserDefinedTypeName",
+                                            "pathNode": {
+                                                "id": 203,
+                                                "name": "LibPart.Part",
+                                                "nodeType": "IdentifierPath",
+                                                "referencedDeclaration": 11,
+                                                "src": "262:12:3"
+                                            },
+                                            "referencedDeclaration": 11,
+                                            "src": "262:12:3",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Part_$11_storage_ptr",
+                                                "typeString": "struct LibPart.Part"
+                                            }
+                                        },
+                                        "id": 205,
+                                        "nodeType": "ArrayTypeName",
+                                        "src": "262:14:3",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Part_$11_storage_$dyn_storage_ptr",
+                                            "typeString": "struct LibPart.Part[]"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "261:23:3"
+                        },
+                        "scope": 230,
+                        "src": "187:135:3",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "baseFunctions": [
+                            189
+                        ],
+                        "body": {
+                            "id": 228,
+                            "nodeType": "Block",
+                            "src": "418:51:3",
+                            "statements": [
+                                {
+                                    "eventCall": {
+                                        "arguments": [
+                                            {
+                                                "id": 224,
+                                                "name": "_id",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 215,
+                                                "src": "446:3:3",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            {
+                                                "id": 225,
+                                                "name": "_royalties",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 219,
+                                                "src": "451:10:3",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_Part_$11_memory_ptr_$dyn_memory_ptr",
+                                                    "typeString": "struct LibPart.Part memory[] memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_array$_t_struct$_Part_$11_memory_ptr_$dyn_memory_ptr",
+                                                    "typeString": "struct LibPart.Part memory[] memory"
+                                                }
+                                            ],
+                                            "id": 223,
+                                            "name": "RoyaltiesSet",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 44,
+                                            "src": "433:12:3",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_array$_t_struct$_Part_$11_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                                                "typeString": "function (uint256,struct LibPart.Part memory[] memory)"
+                                            }
+                                        },
+                                        "id": 226,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "433:29:3",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 227,
+                                    "nodeType": "EmitStatement",
+                                    "src": "428:34:3"
+                                }
+                            ]
+                        },
+                        "id": 229,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "_onRoyaltiesSet",
+                        "nameLocation": "337:15:3",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": {
+                            "id": 221,
+                            "nodeType": "OverrideSpecifier",
+                            "overrides": [],
+                            "src": "400:8:3"
+                        },
+                        "parameters": {
+                            "id": 220,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 215,
+                                    "mutability": "mutable",
+                                    "name": "_id",
+                                    "nameLocation": "361:3:3",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 229,
+                                    "src": "353:11:3",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 214,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "353:7:3",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 219,
+                                    "mutability": "mutable",
+                                    "name": "_royalties",
+                                    "nameLocation": "388:10:3",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 229,
+                                    "src": "366:32:3",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Part_$11_memory_ptr_$dyn_memory_ptr",
+                                        "typeString": "struct LibPart.Part[]"
+                                    },
+                                    "typeName": {
+                                        "baseType": {
+                                            "id": 217,
+                                            "nodeType": "UserDefinedTypeName",
+                                            "pathNode": {
+                                                "id": 216,
+                                                "name": "LibPart.Part",
+                                                "nodeType": "IdentifierPath",
+                                                "referencedDeclaration": 11,
+                                                "src": "366:12:3"
+                                            },
+                                            "referencedDeclaration": 11,
+                                            "src": "366:12:3",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Part_$11_storage_ptr",
+                                                "typeString": "struct LibPart.Part"
+                                            }
+                                        },
+                                        "id": 218,
+                                        "nodeType": "ArrayTypeName",
+                                        "src": "366:14:3",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Part_$11_storage_$dyn_storage_ptr",
+                                            "typeString": "struct LibPart.Part[]"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "352:47:3"
+                        },
+                        "returnParameters": {
+                            "id": 222,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "418:0:3"
+                        },
+                        "scope": 230,
+                        "src": "328:141:3",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "internal"
+                    }
+                ],
+                "scope": 231,
+                "src": "122:349:3",
+                "usedErrors": []
+            }
+        ],
+        "src": "33:439:3"
+    },
+    "functionHashes": {
+        "getRaribleV2Royalties(uint256)": "cad96cca",
+        "royalties(uint256,uint256)": "8924af74"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "114200",
+            "executionCost": "159",
+            "totalCost": "114359"
+        },
+        "external": {
+            "getRaribleV2Royalties(uint256)": "infinite",
+            "royalties(uint256,uint256)": "4749"
+        },
+        "internal": {
+            "_onRoyaltiesSet(uint256,struct LibPart.Part memory[] memory)": "infinite"
+        }
+    }
+}
